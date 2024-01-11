@@ -1,0 +1,66 @@
+<h1>editando: {{user.name}}</h1>
+
+<form action="/users/update" method="post" class="form">
+<input type="hidden" name="id" value="{{users.id}}">
+    <div class="form-control">
+        <label for="name">Nome</label>
+        <input type="text" name="name" value="{{users.name}}" >
+    </div>
+    <div class="form-control">
+        <label for="ocupation">nome:</label>
+        <input type="text" name="ocupation" value="{{users.ocupation}}">
+
+    </div>
+    <div class=" form-checkbox">
+        {{#if users.newsLetter}}
+        <input type="checkbox" name="newsLetter" checked>
+        {{else}}
+        <input type="checkbox" name="newsLetter" >
+        {{/if}}
+        <label for="newsLetter">enviar promoções</label>
+        
+
+    </div>
+    <input type="submit" value="cadastrar">
+
+
+
+</form>
+<div class="eddress-container">
+    <h2>endereços:</h2>
+    <form action="/address/create" method="post">
+    <input type="hidden" name="UserId" value="{{users.id}}">
+    <div class="form-control">
+        <label for="street">Rua</label>
+        <input type="text" name="street" placeholder="Digite sua rua">
+    </div>
+    <div class="form-control">
+        <label for="number">numero:</label>
+        <input type="text" name="number" placeholder="Digite o  numero da residencia">
+    </div>
+    <div class="form-control">
+        <label for="city">cidade</label>
+        <input type="text" name="city" placeholder="Digite sua cidade">
+    </div>
+    <input type="submit" value="incluir endereço">
+    
+    
+    
+    </form>
+    <div class="address-list">
+        <h2>lista de endereços</h2>
+        {{#each users.Addresses}}
+            <div>#{{this.id}} - 
+                {{this.street}} - 
+                {{this.number}} - 
+                {{this.city}}
+                <form action="/address/delete" method="post">
+                    <input type="hidden" name="UserId" value="{{this.UserId}}">    
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <input type="submit" value="excluir">
+                </form>
+            
+            </div>
+        {{/each}}
+    </div>
+</div>

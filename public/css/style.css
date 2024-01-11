@@ -1,0 +1,133 @@
+*{
+    font-family: helvetica;
+    margin: 0;
+}
+body{
+ background-color: #fff;
+}
+#navbar{
+    border-bottom: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#navbar ul{
+display: flex;
+list-style: none;
+}
+#navbar li{
+    margin-left: 1em;
+    }
+h1{
+    margin-bottom: 1em;
+    text-align: center;
+}
+.form{
+    
+    width: 450px;
+    margin: 0 auto;
+}
+.form-checkbox{
+    
+    
+    flex-direction: row;
+}
+.form-checkbox input{
+    margin-right: 10px;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5em;
+}
+.form-control label{
+    font-weight: bold;
+    margin-bottom: .3em;
+}
+.form-control input{
+    padding: 5px;
+}
+/*users*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+}
+.item{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1 1 29%;
+    max-width: 29%;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.item h2,.item p{
+margin-bottom: .8em;
+}
+.action{
+    display: flex;
+    justify-content: space-between;
+}
+
+.action a,
+.action input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration:none ;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+
+}
+.action .delete_btn{
+    margin-left: 1rem;
+    background-color: red;
+    
+}
+
+.action .datails-btn{
+    background-color: blue;
+}
+/*address*/
+
+.eddress-container{
+    max-width: 1000px;
+    margin: 1em auto;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+    padding-bottom: 200px;
+}
+
+.eddress-container h2{
+    margin-bottom: 1em;
+
+}
+.eddress-container form{
+    width: 300px;
+}
+
+.address-list{
+    
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+    
+}
+
+.address-list div{
+    display: flex;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+}
+.address-list form{
+    margin-left: 1em;
+}
+
